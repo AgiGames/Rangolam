@@ -37,7 +37,7 @@ function SettingsDrawer({ settingsFor, gridScaleValue, gridScaleSetValue, petalO
                                 value={gridScaleValue}
                                 setValue={gridScaleSetValue}
                             >
-                                புல்லிகலின் வரிசை
+                                புல்லிகலளின் வரிசை
                             </NumberInput>
                         </>
                         :
