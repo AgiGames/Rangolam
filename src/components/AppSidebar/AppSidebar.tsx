@@ -42,21 +42,21 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
             <SidebarHeader className="flex flex-col">
                 <div className="flex flex-row items-center justify-start text-3xl">
                 <img src="/rangolam.svg" className="w-8 h-8 mr-2"/>
-                Rangolam
+                ரங்கோலம்
                 </div>
                 <Separator />
             </SidebarHeader>
             <SidebarContent>
                 <SidebarGroup>
                 <SidebarGroupLabel>
-                    Choose Pattern
+                    வடிவத்தைத் தேர்ந்தெடுக்கவும்
                 </SidebarGroupLabel>
                 <SidebarMenu>
                     <SidebarMenuItem>
                         <Tabs defaultValue={selectedMode} orientation="vertical">
                             <TabsList className="w-full">
-                                <TabsTrigger value="rangoli" onClick={(e) => {setSelectedMode("rangoli"); onClickRangoli(e)}}><Flower /> Rangoli</TabsTrigger>
-                                <TabsTrigger value="kolam" onClick={(e) => {setSelectedMode("kolam"); onClickKolam(e)}}><Grid3X3 /> Kolam</TabsTrigger>
+                                <TabsTrigger value="rangoli" onClick={(e) => {setSelectedMode("rangoli"); onClickRangoli(e)}}><Flower /> ரங்கோலி</TabsTrigger>
+                                <TabsTrigger value="kolam" onClick={(e) => {setSelectedMode("kolam"); onClickKolam(e)}}><Grid3X3 /> கோலம்</TabsTrigger>
                             </TabsList>
                         </Tabs>
                     </SidebarMenuItem>
@@ -72,7 +72,7 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
                         rel="noopener noreferrer"
                         className="flex flex-row items-center justify-evenly text-muted-foreground text-xs"
                     >
-                        Made by Agilesh Arumugam
+                        உருவாக்கியவர் அகிலேஷ் ஆறுமுகம்
                         <Avatar>
                             <AvatarImage
                             src="https://github.com/AgiGames.png"

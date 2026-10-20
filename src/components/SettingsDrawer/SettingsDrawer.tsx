@@ -20,11 +20,11 @@ function SettingsDrawer({ settingsFor, gridScaleValue, gridScaleSetValue, petalO
     
     return (
         <Drawer swipeDirection="right">
-            <DrawerTrigger render={<Button variant="ghost" className="text-muted-foreground"/>}><SettingsIcon /> Settings</DrawerTrigger>
+            <DrawerTrigger render={<Button variant="ghost" className="text-muted-foreground"/>}><SettingsIcon /> அமைப்புகள்</DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader>
-                    <DrawerTitle>Settings</DrawerTitle>
-                    <DrawerDescription>Change Pattern Settings.</DrawerDescription>
+                    <DrawerTitle>அமைப்புகள்</DrawerTitle>
+                    <DrawerDescription>வடிவத்தின் அமைப்புகளை மாற்ற</DrawerDescription>
                 </DrawerHeader>
                 <div className="flex flex-col gap-2 p-4">
                     {
@@ -37,7 +37,7 @@ function SettingsDrawer({ settingsFor, gridScaleValue, gridScaleSetValue, petalO
                                 value={gridScaleValue}
                                 setValue={gridScaleSetValue}
                             >
-                                Grid Scale
+                                புல்லிகலின் வரிசை
                             </NumberInput>
                         </>
                         :
@@ -49,7 +49,7 @@ function SettingsDrawer({ settingsFor, gridScaleValue, gridScaleSetValue, petalO
                                 value={petalOrderValue}
                                 setValue={petalOrderSetValue}
                             >
-                                Petal Order
+                                இதழின் வரிசை
                             </NumberInput>
                             <NumberInput
                                 min={0}
@@ -58,13 +58,13 @@ function SettingsDrawer({ settingsFor, gridScaleValue, gridScaleSetValue, petalO
                                 value={layerOrderValue}
                                 setValue={layerOrderSetValue}
                             >
-                                Layer Order
+                                அடுக்குகளின் வரிசை
                             </NumberInput>
                         </>
                     }
                 </div>
                 <DrawerFooter>
-                    <DrawerClose render={<Button variant="outline" />}>Save & Close</DrawerClose>
+                    <DrawerClose render={<Button variant="outline" />}>குறிப்பெடுத்து மூடு</DrawerClose>
                 </DrawerFooter>
             </DrawerContent>
         </Drawer>

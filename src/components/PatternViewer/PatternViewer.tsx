@@ -104,6 +104,16 @@ function PatternViewer({ patternName }: PatternViewerProps) {
         }
     }
 
+    let engilshToTamilPlural: Record<string, string> = {
+        "kolam": "கோலங்கள்",
+        "rangoli": "ரங்கோலிகள்"
+    }
+
+    let engilshToTamilPluralPossessive: Record<string, string> = {
+        "kolam": "கோலங்களை",
+        "rangoli": "ரங்கோலிகளை"
+    }
+
     return (
       <Empty>
         <EmptyHeader>
@@ -113,9 +123,9 @@ function PatternViewer({ patternName }: PatternViewerProps) {
                     <EmptyMedia variant="icon">
                     <ImageIcon />
                     </EmptyMedia>
-                    <EmptyTitle>{`No Generated ${patternName.charAt(0).toUpperCase() + patternName.slice(1)} Yet`}</EmptyTitle>
+                    <EmptyTitle>{`இதுவரை ${engilshToTamilPlural[patternName]} எதுவும் உருவாக்கப்படவில்லை`}</EmptyTitle>
                     <EmptyDescription>
-                    {`You haven't generated any ${patternName} yet.`}
+                        {`நீங்கள் இன்னும் எந்த ${engilshToTamilPluralPossessive[patternName]}யும் உருவாக்கவில்லை.`}
                     </EmptyDescription>
                 </>
                 :
@@ -132,28 +142,28 @@ function PatternViewer({ patternName }: PatternViewerProps) {
         <EmptyContent className="flex-row justify-center gap-2">
             {
                 patternSrc == ""?
-                    <Button onClick={async () => {await generatePattern()}}>
+                    <Button onClick={async () => {await generatePattern()}} disabled={generating}>
                         {
-                            generating? <><Spinner data-icon="inline-start"/> Generating</>
-                            : <><Plus />{`Create ${patternName.charAt(0).toUpperCase() + patternName.slice(1)}`}</>
+                            generating? <><Spinner data-icon="inline-start"/> உருவாக்குகிறது</>
+                            : <><Plus />{`${engilshToTamilPlural[patternName]} உருவாக்குக`}</>
                         }
                     </Button>
                 :
                 <ButtonGroup>
-                    <Button onClick={async () => {await generatePattern()}}>
+                    <Button onClick={async () => {await generatePattern()}} disabled={generating}>
                         {
-                            generating? <><Spinner data-icon="inline-start"/> Generating</>
-                            : <><Plus />{`Create ${patternName.charAt(0).toUpperCase() + patternName.slice(1)}`}</>
+                            generating? <><Spinner data-icon="inline-start"/> உருவாக்குகிறது</>
+                            : <><Plus />{`${engilshToTamilPlural[patternName]} உருவாக்குக`}</>
                         }
                     </Button>
                     <Button onClick={() => {downloadPattern()}}>
-                        <Download /> Download
+                        <Download /> பதிவிறக்கம்
                     </Button>
                     <Button 
                         variant="destructive"
                         onClick={() => {setPatternSrc("")}}
                     >
-                        <Trash /> Clear
+                        <Trash /> அழி
                     </Button>
                 </ButtonGroup>
             }
