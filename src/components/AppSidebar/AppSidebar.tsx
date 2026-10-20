@@ -30,8 +30,11 @@ import { Tabs, TabsList, TabsTrigger } from "../ui/tabs"
 
 import { FaGithub } from "react-icons/fa";
 import type { AppSidebarProps } from "./types";
+import { useState } from "react"
 
 function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
+    const [selectedMode, setSelectedMode] = useState("Rangoli");
+
     return (
         <div>
         <SidebarProvider>
@@ -50,10 +53,10 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
                 </SidebarGroupLabel>
                 <SidebarMenu>
                     <SidebarMenuItem>
-                        <Tabs defaultValue="rangoli" orientation="vertical">
+                        <Tabs defaultValue={selectedMode} orientation="vertical">
                             <TabsList className="w-full">
-                                <TabsTrigger value="rangoli" onClick={onClickRangoli}><Flower /> Rangoli</TabsTrigger>
-                                <TabsTrigger value="kolam" onClick={onClickKolam}><Grid3X3 /> Kolam</TabsTrigger>
+                                <TabsTrigger value="rangoli" onClick={(e) => {setSelectedMode("rangoli"); onClickRangoli(e)}}><Flower /> Rangoli</TabsTrigger>
+                                <TabsTrigger value="kolam" onClick={(e) => {setSelectedMode("kolam"); onClickKolam(e)}}><Grid3X3 /> Kolam</TabsTrigger>
                             </TabsList>
                         </Tabs>
                     </SidebarMenuItem>
