@@ -104,12 +104,12 @@ function PatternViewer({ patternName }: PatternViewerProps) {
         }
     }
 
-    let engilshToTamilPlural: Record<string, string> = {
+    const engilshToTamilPlural: Record<string, string> = {
         "kolam": "கோலங்கள்",
         "rangoli": "ரங்கோலிகள்"
     }
 
-    let engilshToTamilPluralPossessive: Record<string, string> = {
+    const engilshToTamilPluralPossessive: Record<string, string> = {
         "kolam": "கோலங்களை",
         "rangoli": "ரங்கோலிகளை"
     }

@@ -33,7 +33,7 @@ import type { AppSidebarProps } from "./types";
 import { useState } from "react"
 
 function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
-    const [selectedMode, setSelectedMode] = useState("Rangoli");
+    const [selectedMode, setSelectedMode] = useState("rangoli");
 
     return (
         <div>

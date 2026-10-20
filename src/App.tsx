@@ -7,7 +7,7 @@ export function App() {
   const [mode, setMode] = useState("rangoli")
 
   return (
-    <div className="flex felx-row">
+    <div className="flex flex-row">
       <AppSidebar onClickKolam={() => {setMode("kolam")}} onClickRangoli={() => {setMode("rangoli")}}/>
       <PatternViewer patternName={mode} />
     </div>
