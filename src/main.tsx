@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/theme-provider.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider>
-      <App />
+    <ThemeProvider defaultTheme="light">
+        <App />
     </ThemeProvider>
   </StrictMode>
 )
