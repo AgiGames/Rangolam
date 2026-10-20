@@ -9,6 +9,7 @@ import {
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuItem,
+  SidebarRail,
 } from "../ui/sidebar"
 
 import { Separator } from "@/components/ui/separator"
@@ -29,7 +30,7 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
     return (
         <div>
         <SidebarProvider>
-            <Sidebar>
+            <Sidebar variant="inset">
             <SidebarHeader className="flex flex-col">
                 <div className="flex flex-row items-center justify-start text-3xl">
                 <img src="/rangolam.svg" className="w-8 h-8 mr-2"/>
@@ -79,6 +80,7 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
             </SidebarFooter>
             </Sidebar>
             <SidebarTrigger />
+            <SidebarRail />
         </SidebarProvider>
         </div>
   );
