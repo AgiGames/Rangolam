@@ -13,10 +13,6 @@ import {
 
 import { Separator } from "@/components/ui/separator"
 
-import { 
-  Paintbrush2Icon, 
-} from "lucide-react"
-
 import {
   Avatar,
   AvatarBadge,
