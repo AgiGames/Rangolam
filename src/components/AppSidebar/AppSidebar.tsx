@@ -14,6 +14,11 @@ import {
 
 import { Separator } from "@/components/ui/separator"
 
+import { 
+    Grid3X3,
+    Flower
+} from "lucide-react"
+
 import {
   Avatar,
   AvatarBadge,
@@ -47,8 +52,8 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
                     <SidebarMenuItem>
                         <Tabs defaultValue="rangoli" orientation="vertical">
                             <TabsList className="w-full">
-                                <TabsTrigger value="rangoli" onClick={onClickRangoli}>Rangoli</TabsTrigger>
-                                <TabsTrigger value="kolam" onClick={onClickKolam}>Kolam</TabsTrigger>
+                                <TabsTrigger value="rangoli" onClick={onClickRangoli}><Flower /> Rangoli</TabsTrigger>
+                                <TabsTrigger value="kolam" onClick={onClickKolam}><Grid3X3 /> Kolam</TabsTrigger>
                             </TabsList>
                         </Tabs>
                     </SidebarMenuItem>
