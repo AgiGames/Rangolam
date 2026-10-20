@@ -32,7 +32,7 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
             <Sidebar>
             <SidebarHeader className="flex flex-col">
                 <div className="flex flex-row items-center justify-start text-3xl">
-                <img src="rangolam.svg" className="w-8 h-8 mr-2"/>
+                <img src="/rangolam.svg" className="w-8 h-8 mr-2"/>
                 Rangolam
                 </div>
                 <Separator />
