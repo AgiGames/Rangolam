@@ -142,14 +142,14 @@ function PatternViewer({ patternName }: PatternViewerProps) {
         <EmptyContent className="flex-row justify-center gap-2">
             {
                 patternSrc == ""?
-                    <Button onClick={async () => {await generatePattern()}} disabled={generating}>
+                    <Button onClick={async () => {await generatePattern()}} disabled={generating} className="w-full">
                         {
                             generating? <><Spinner data-icon="inline-start"/> உருவாக்குகிறது</>
                             : <><Plus />{`${engilshToTamilPlural[patternName]} உருவாக்குக`}</>
                         }
                     </Button>
                 :
-                <ButtonGroup>
+                <ButtonGroup orientation="vertical" className="w-full">
                     <Button onClick={async () => {await generatePattern()}} disabled={generating}>
                         {
                             generating? <><Spinner data-icon="inline-start"/> உருவாக்குகிறது</>
