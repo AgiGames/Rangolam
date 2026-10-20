@@ -5,7 +5,6 @@ import {
   SidebarGroup, 
   SidebarHeader, 
   SidebarProvider,
-  SidebarRail,
   SidebarTrigger,
   SidebarGroupLabel,
   SidebarMenu,
@@ -82,7 +81,6 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
                     </a>
                 </div>
             </SidebarFooter>
-            <SidebarRail />
             </Sidebar>
             <SidebarTrigger />
         </SidebarProvider>
