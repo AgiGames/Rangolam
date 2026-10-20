@@ -10,15 +10,12 @@ import {
   SidebarGroupLabel,
   SidebarMenu,
   SidebarMenuItem,
-  SidebarMenuButton
 } from "../ui/sidebar"
 
 import { Separator } from "@/components/ui/separator"
 
 import { 
   Paintbrush2Icon, 
-  FlowerIcon, 
-  Grid3X3Icon,
 } from "lucide-react"
 
 import {
