@@ -62,7 +62,7 @@ function PatternViewer({ patternName }: PatternViewerProps) {
                         },
                         body: JSON.stringify(
                             {
-                                grid: gridScale,
+                                gridOrder: gridScale,
                             }
                         )
                     }
