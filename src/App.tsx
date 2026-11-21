@@ -1,19 +1,15 @@
-import AppSidebar from "./components/AppSidebar/AppSidebar"
-import PatternViewer from "./components/PatternViewer/PatternViewer";
-
-import { useState } from "react";
-import { useIsMobile } from "./hooks/use-mobile";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Canvas from './components/Canvas/Canvas';
 
 export function App() {
-  const isMobile = useIsMobile();
-  const [mode, setMode] = useState("rangoli")
-
   return (
-    <div style={{ paddingRight: isMobile? "2rem" : "0rem" }} className="flex flex-row">
-      <AppSidebar onClickKolam={() => {setMode("kolam")}} onClickRangoli={() => {setMode("rangoli")}}/>
-      <PatternViewer patternName={mode} />
-    </div>
-  );
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/canvas" element={<Canvas />} />
+        </Routes>
+      </BrowserRouter>
+  )
 }
-
-export default App

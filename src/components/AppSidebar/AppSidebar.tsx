@@ -28,12 +28,16 @@ import {
 
 import { Tabs, TabsList, TabsTrigger } from "../ui/tabs"
 
+import { Button } from "../ui/button"
+
 import { FaGithub } from "react-icons/fa";
 import type { AppSidebarProps } from "./types";
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
     const [selectedMode, setSelectedMode] = useState("rangoli");
+    const navigate = useNavigate();
 
     return (
         <div>
@@ -65,6 +69,7 @@ function AppSidebar({ onClickRangoli, onClickKolam }: AppSidebarProps) {
             </SidebarContent>
             <SidebarFooter>
                 <div className="flex flex-col gap-2">
+                    <Button variant="default" className="w-full" onClick={() => {navigate('/')}}>பின்</Button>
                     <Separator orientation="horizontal"/>
                     <a
                         href="https://github.com/AgiGames"
