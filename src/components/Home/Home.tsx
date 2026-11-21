@@ -2,16 +2,13 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 import {
   Card,
-  CardAction,
   CardContent,
-  CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 
-import { FaPrayingHands, FaArrowRight } from "react-icons/fa";
-import { Separator } from "@/components/ui/separator";
+import { FaArrowRight } from "react-icons/fa";
 
 export function Home() {
   const navigate = useNavigate();
