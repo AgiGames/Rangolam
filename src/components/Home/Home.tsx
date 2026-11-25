@@ -27,7 +27,7 @@ export function Home() {
                 </CardHeader>                
                 <CardContent>
                     <i style={{ fontSize: isMobile? "1rem" : "2.25rem" }} className="text-muted-foreground text-wrap">
-                        தமிழ் கலாச்சாரத்தை வளர்த்துங்க!
+                        வாசலில் கோலம், வாழ்வில் வளம்!
                     </i>
                 </CardContent>
                 <CardFooter className="flex flex-row py-5 items-center bg-teal-50 border-t-2">
